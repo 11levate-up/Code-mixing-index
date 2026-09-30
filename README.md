@@ -43,9 +43,9 @@ Tested on isolated words:
 
 | Word | Dictionary v1 | IndicLID v2 |
 |------|---------------|-------------|
-| mujhe | Hindi ✅ | Hindi ✅ |
-| kaisa | Hindi ✅ | Hindi ✅ |
-| hello | English ✅ | English ✅ |
+| mujhe | Hindi  | Hindi  |
+| kaisa | Hindi  | Hindi  |
+| hello | English  | English  |
 | BROH | English ❌ (not real Hindi anyway) | Hindi (edge case) |
 
 IndicLID generalizes to unseen words without needing a manually maintained 
