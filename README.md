@@ -28,7 +28,7 @@ python src/main.py
 ## Results
 
 ### Example
-Input: "hi BROH KESA HAI TU SALE MUJHE MILNE NAHI AYA TUUU BHAI BAHAN KE DAALE I AM BROH OF YOURS"
+Input: "hi BROH KESA HAI TU SALE MUJHE MILNE NAHI AYA TUUU BHAI BAHAN KE BEECH I AM BROH OF YOURS"
 
 CMI Score: 68.4
 Hindi words: 12 | English words: 5
