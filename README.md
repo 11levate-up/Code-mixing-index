@@ -29,3 +29,16 @@ python src/main.py
 
 ## License
 MIT
+
+
+## Approach (Updated)
+Word-level language detection now uses IndicLID (AI4Bharat) — a trained 
+language identification model — instead of a fixed dictionary. This 
+generalizes to unseen words, unlike a static word list.
+
+## Known Limitations
+IndicLID is trained across 22 Indian languages, so isolated short Hindi 
+words sometimes get misclassified as closely related languages (e.g. 
+Maithili), since single words give limited context. This project 
+constrains predictions to its Hindi-English bilingual scope: any 
+non-English prediction is treated as Hindi.
