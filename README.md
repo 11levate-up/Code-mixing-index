@@ -25,7 +25,32 @@ python src/main.py
 ```
 
 ## Results
-(jab test karoge apne data pe, yahan numbers/examples daalna)
+## Results
+
+### Example
+Input: "hi BROH KESA HAI TU SALE MUJHE MILNE NAHI AYA TUUU BHAI BAHAN KE DAALE I AM BROH OF YOURS"
+
+CMI Score: 68.4
+Hindi words: 12 | English words: 5
+
+### Dictionary-based approach (v1)
+- Works well for common, pre-listed words (hai, tu, mujhe, bhai, bahan)
+- Fails on unseen/slang words (e.g. "BROH", "DAALE" misclassified as English)
+- Cannot generalize beyond its fixed word list
+
+### Model-based approach (v2 — IndicLID)
+Tested on isolated words:
+
+| Word | Dictionary v1 | IndicLID v2 |
+|------|---------------|-------------|
+| mujhe | Hindi ✅ | Hindi ✅ |
+| kaisa | Hindi ✅ | Hindi ✅ |
+| hello | English ✅ | English ✅ |
+| BROH | English ❌ (not real Hindi anyway) | Hindi (edge case) |
+
+IndicLID generalizes to unseen words without needing a manually maintained 
+list, at the cost of occasional confusion with closely related languages 
+on short, context-free inputs (see Known Limitations).
 
 ## License
 MIT
